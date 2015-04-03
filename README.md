@@ -52,7 +52,7 @@ Dependency injection in TypeScript.
 class AlertService {
 
   public showAlert(text:string):void {
-    alert(text)
+    alert(text);
   }
 
 }
@@ -86,7 +86,7 @@ class Notifier
   
 ```
 ### Testing services
-So, how to test a service in an isolated environement? We have to mock all it's dependencies using `inject.bind()`. Example below uses jasmine, sinon and chai.
+So, how to test a service in an isolated environment? We have to mock all it's dependencies using `inject.bind()`. Example below uses jasmine, sinon and chai.
 
 ```javascript
 it('calls alert to be shown', function() { 
@@ -100,7 +100,7 @@ it('calls alert to be shown', function() {
   alertServiceMock.showAlert.should.have.been.calledWith(warning);
 });
 ```
-To reset bindings, we have to call `inject.resetBindings()`. It's useful to call this before each test - to make sure that they are independent. Example test setup:
+To reset bindings, we have to call `inject.resetBindings()`. It's useful to call this before each test, to make sure that they are independent. Example test setup:
 ```javascript
 var alertServiceMock;
 var notifier;
