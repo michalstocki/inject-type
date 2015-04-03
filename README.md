@@ -138,7 +138,7 @@ function ProductFactory() {
   this.injector = inject(inject.Injector);
 }
 
-ProductFactory.createProductFrom = function(data) {
+ProductFactory.prototype.createProductFrom = function(data) {
   return this.injector.resolve(Product, data);
 }
 
