@@ -105,7 +105,7 @@ To reset bindings, we have to call `inject.resetBindings()`. It's useful to call
 var alertServiceMock;
 var notifier;
 beforeEach(function() {
-  inject.removeBindings();
+  inject.resetBindings();
   alertServiceMock = sinon.createStubInstance(AlertService);
   inject.bind(AlertService, alertServiceMock);
   notifier = inject(Notifier);
